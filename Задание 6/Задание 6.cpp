@@ -1,27 +1,25 @@
-﻿// Задание 1.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+﻿// Задание 6.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
-
 using namespace std;
 #include <iostream>
 
-bool number(int a) 
+double km(double mi)
 {
-	int i = 2;
-	while (i * i <= a) 
-	{
-		if (a % i == 0)
-			return false;
-		i++;
-	}
-	return true;
+    return (mi * 1.609);
 }
-
+double fut(double mi)
+{
+    return (mi * 5280);
+}
 int main()
 {
-	for (int i = 1; i <= 200; i++)
-		if (number(i))
-		cout << i << endl;
-	return 0;
+    setlocale(0, "");
+    double mi;
+    cout << "Введите растояние в милях: ";
+    cin >> mi;
+    cout << mi << " мили = " << km(mi) << " километры " << endl;
+    cout << mi << " мили = " << fut(mi) << " футы " << endl;
+    return 0;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"

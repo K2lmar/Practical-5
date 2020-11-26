@@ -1,27 +1,22 @@
-﻿// Задание 1.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+﻿// Задание 4.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
 using namespace std;
 #include <iostream>
 
-bool number(int a) 
+double plosad(int rad)
 {
-	int i = 2;
-	while (i * i <= a) 
-	{
-		if (a % i == 0)
-			return false;
-		i++;
-	}
-	return true;
+    double pi = 3.14;
+    return (pi * rad * rad);
 }
-
 int main()
 {
-	for (int i = 1; i <= 200; i++)
-		if (number(i))
-		cout << i << endl;
-	return 0;
+    setlocale(0, "");
+    int rad;
+    cout << "Введите радиус окружности:";
+    cin >> rad;
+    cout << "Площадь окружности = " << plosad(rad) << endl;
+    return 0;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"

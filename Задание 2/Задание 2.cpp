@@ -1,26 +1,21 @@
-﻿// Задание 1.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+﻿// Задание 2.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
-
 using namespace std;
 #include <iostream>
 
-bool number(int a) 
+double gradus(double rad)
 {
-	int i = 2;
-	while (i * i <= a) 
-	{
-		if (a % i == 0)
-			return false;
-		i++;
-	}
-	return true;
+	double pi = 3.14;
+	return (rad * (180 /pi));
 }
 
 int main()
 {
-	for (int i = 1; i <= 200; i++)
-		if (number(i))
-		cout << i << endl;
+	setlocale(0, "");
+	double rad;
+	cout << "Введите радиан: ";
+	cin >> rad;
+	cout << rad << " радиан = " << gradus(rad) << " градус " << endl;
 	return 0;
 }
 

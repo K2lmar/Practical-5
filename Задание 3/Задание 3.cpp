@@ -1,27 +1,25 @@
-﻿// Задание 1.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+﻿// Задание 3.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
-
 using namespace std;
 #include <iostream>
 
-bool number(int a) 
+double arifm (int a, int b, int c) 
 {
-	int i = 2;
-	while (i * i <= a) 
-	{
-		if (a % i == 0)
-			return false;
-		i++;
-	}
-	return true;
+    return ((a + b + c) / 3);
 }
 
 int main()
 {
-	for (int i = 1; i <= 200; i++)
-		if (number(i))
-		cout << i << endl;
-	return 0;
+    setlocale(0, "");
+    int a, b, c;
+    cout << "Введите 1 число: ";
+    cin >> a;
+    cout << "Введите 2 число: ";
+    cin >> b;
+    cout << "Введите 3 число: ";
+    cin >> c;
+    cout << "Среднее арифметическое чисел = " << arifm(a, b, c) << endl;
+    return 0;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
